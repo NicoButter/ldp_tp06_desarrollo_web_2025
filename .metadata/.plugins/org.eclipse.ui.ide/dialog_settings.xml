@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/lordcommander/unpa_2025/laboratorio_de_programacion/tp_06_desarrollo_web/ldp_tp06_desarrollo_web_2025"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="519"/>
+			<item key="DIALOG_Y_ORIGIN" value="92"/>
+			<item key="DIALOG_WIDTH" value="888"/>
+			<item key="DIALOG_HEIGHT" value="673"/>
+			<item key="DIALOG_FONT_NAME" value="1|SUSE|10.0|0|GTK|1|"/>
+		</section>
+	</section>
+</section>
