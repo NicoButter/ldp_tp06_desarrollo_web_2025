@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></h1>
+    <form th:action="@{/genres}" th:object="${genre}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" th:field="*{nombre}" id="nombre" required maxlength="20">
+        <button type="submit">Guardar</button>
+    </form>
+    <a th:href="@{/genres}">Volver</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# Archivos y directorios generados por Maven
+target/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+dependency-reduced-pom.xml
+
+# Archivos de configuración del IDE
+# Eclipse
+.project
+.classpath
+.settings/
+*.launch
+*.prefs
+bin/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA (por si alguien usa otro IDE)
+.idea/
+*.iml
+
+# Archivos de compilación y caché de Java
+*.class
+*.log
+
+# Archivos de configuración local de Spring Boot
+application.properties
+application.yml
+
+# Archivos de datos generados por PostgreSQL u otras bases de datos
+*.sql
+data.sql
+
+# Directorios de caché y temporales
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.DS_Store
+
+# Dependencias descargadas por Maven
+.m2/
+
+# Archivos de entorno local
+*.env
+*.local
+
+# Directorios de pruebas generados
+target/test-classes/
+
+# Archivos de JavaDoc generados
+javadoc/

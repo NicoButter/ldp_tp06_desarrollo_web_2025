@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></h1>
+    <form th:action="@{/playlists}" th:object="${playlist}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label for="titulo">Título:</label>
+        <input type="text" th:field="*{titulo}" id="titulo" required maxlength="50">
+        <label for="interprete">Intérprete:</label>
+        <input type="text" th:field="*{interprete}" id="interprete" maxlength="40">
+        <label for="cantidadTemas">Cantidad de Temas:</label>
+        <input type="number" th:field="*{cantidadTemas}" id="cantidadTemas" min="0" max="999">
+        <label for="duracionTotal">Duración Total (min):</label>
+        <input type="number" th:field="*{duracionTotal}" id="duracionTotal" step="0.01" min="0" max="99999.99">
+        <label for="genre">Género:</label>
+        <select th:field="*{genre}" id="genre" required>
+            <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.nombre}"></option>
+        </select>
+        <button type="submit">Guardar</button>
+    </form>
+    <a th:href="@{/playlists}">Volver</a>
+</body>
+</html>

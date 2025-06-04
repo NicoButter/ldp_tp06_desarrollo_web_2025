@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlists de Spotify</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Playlists</h1>
+    <a th:href="@{/playlists/new}">Crear nueva playlist</a>
+    <a th:href="@{/genres}">Gestionar géneros</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Intérprete</th>
+                <th>Cantidad de Temas</th>
+                <th>Duración Total</th>
+                <th>Género</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="playlist : ${playlists}">
+                <td th:text="${playlist.id}"></td>
+                <td th:text="${playlist.titulo}"></td>
+                <td th:text="${playlist.interprete}"></td>
+                <td th:text="${playlist.cantidadTemas}"></td>
+                <td th:text="${playlist.duracionTotal}"></td>
+                <td th:text="${playlist.genre.nombre}"></td>
+                <td>
+                    <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}">Editar</a>
+                    <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Géneros Musicales</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Géneros Musicales</h1>
+    <a th:href="@{/genres/new}">Crear nuevo género</a>
+    <a th:href="@{/playlists}">Volver a playlists</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="genre : ${genres}">
+                <td th:text="${genre.id}"></td>
+                <td th:text="${genre.nombre}"></td>
+                <td>
+                    <a th:href="@{/genres/edit/{id}(id=${genre.id})}">Editar</a>
+                    <a th:href="@{/genres/delete/{id}(id=${genre.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
