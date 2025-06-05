@@ -2,13 +2,15 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Playlists de Spotify</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Playlists</title>
+   
+    <link rel="stylesheet" th:href="@{/css/playlist_list_styles.css}">
+
 </head>
 <body>
-    <h1>Playlists</h1>
-    <a th:href="@{/playlists/new}">Crear nueva playlist</a>
-    <a th:href="@{/genres}">Gestionar géneros</a>
+    <h1>Lista de Playlists</h1>
+    <a th:href="@{/playlists/new}" class="btn btn-add">Agregar Nueva Playlist</a>
     <table>
         <thead>
             <tr>
@@ -28,13 +30,14 @@
                 <td th:text="${playlist.interprete}"></td>
                 <td th:text="${playlist.cantidadTemas}"></td>
                 <td th:text="${playlist.duracionTotal}"></td>
-                <td th:text="${playlist.genre.nombre}"></td>
+                <td th:text="${playlist.genero?.nombre}"></td>
                 <td>
-                    <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}">Editar</a>
-                    <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}">Eliminar</a>
+                    <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}" class="btn btn-edit">Editar</a>
+                    <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}" class="btn btn-delete" onclick="return confirm('¿Estás seguro de eliminar esta playlist?')">Eliminar</a>
                 </td>
             </tr>
         </tbody>
     </table>
+    <a th:href="@{/}" style="display: inline-block; margin-top: 1rem;">Volver al Inicio</a>
 </body>
 </html>

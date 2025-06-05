@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Colección de Música - Inicio</title>
+
+    <link rel="stylesheet" th:href="@{/css/index_styles.css}">
+
+</head>
+<body>
+    <header>
+        <h1>Gestión de Colección de Música</h1>
+        <p>Administra tus playlists favoritas con facilidad</p>
+    </header>
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Bienvenido a la Aplicación</h2>
+            <p>Organiza y gestiona tu colección de música de manera sencilla. Accede a tus playlists y géneros favoritos desde aquí.</p>
+            <div class="buttons">
+                <a th:href="@{/playlists}" class="btn btn-primary">Ver Playlists</a>
+                <a th:href="@{/genres}" class="btn btn-secondary">Ver Géneros</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Nicolás Butterfield - UNPA</p>
+    </footer>
+</body>
+</html>
