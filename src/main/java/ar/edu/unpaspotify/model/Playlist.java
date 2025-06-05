@@ -1,5 +1,7 @@
 package ar.edu.unpaspotify.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +31,7 @@ public class Playlist {
     private Integer cantidadTemas;
 
     @Column(name = "duracion_total", precision = 7, scale = 2)
-    private Double duracionTotal;
+    private BigDecimal duracionTotal;
 
     @ManyToOne
     @JoinColumn(name = "genero_id", nullable = false)
@@ -39,7 +41,7 @@ public class Playlist {
     public Playlist() {}
 
     // Constructor con campos
-    public Playlist(String titulo, String interprete, Integer cantidadTemas, Double duracionTotal, Genre genre) {
+    public Playlist(String titulo, String interprete, Integer cantidadTemas, BigDecimal duracionTotal, Genre genre) {
         this.titulo = titulo;
         this.interprete = interprete;
         this.cantidadTemas = cantidadTemas;
