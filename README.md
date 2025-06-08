@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_UNPA.png" alt="Logo UNPA" height="120">
+  <img src="img/logo_UNPA.png" alt="Logo UNPA" height="120">
 </p>
 
 <h1 align="center">Trabajo Práctico N°6 - Laboratorio de Programación</h1>
