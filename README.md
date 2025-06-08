@@ -3,8 +3,8 @@
   <img src="img/logo_UNPA.png" alt="Logo UNPA" height="120">
 </p>
 
-<h1 align="center">Trabajo Práctico N°6 - Laboratorio de Programación</h1>
-<h3 align="center">Licenciatura en Sistemas - Universidad Nacional de la Patagonia Austral - 2025</h3>
+<h1 align="center">Trabajo Práctico N°6 - Laboratorio de Programación - 2025</h1>
+<h3 align="center">Licenciatura en Sistemas - Universidad Nacional de la Patagonia Austral</h3>
 
 ---
 
