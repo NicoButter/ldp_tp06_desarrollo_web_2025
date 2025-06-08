@@ -92,7 +92,7 @@ Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/lic
 ## 🕹️ Bonus Track
 
 <p align="center">
-  <img src="https://i.pinimg.com/originals/60/6d/e5/606de5635f7e5efc3abf79ad91c66c90.jpg" alt="Epic Gamer Quote" width="500"><br>
+  <img src="img/Javik.png" alt="Epic Gamer Quote" width="500"><br>
   <strong>"Stand in the ashes of a trillion dead souls and ask the ghosts if honor matters. The silence is your answer."</strong><br>
   <em>– Javik, Mass Effect 3</em>
 </p>
