@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio de Programación - Caso de Estudio - Gestión de Playlists de Spotify - Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Playlists - Inicio Épico</title>
 
-    <link rel="stylesheet" th:href="@{/css/index_styles.css}">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- CSS  -->
+  <link rel="stylesheet" th:href="@{/css/index_styles.css}" />
 
 </head>
 <body>
-    <header>
-        <h1>Caso de Estudio Gestión de Colección de Música</h1>
-        <p>Administra tus playlists favoritas con facilidad</p>
-    </header>
-    <div class="container">
-        <div class="welcome-section">
-            <h2>Bienvenido a la Aplicación</h2>
-            <p>Organiza y gestiona tu colección de música de manera sencilla. Accede a tus playlists y géneros favoritos desde aquí.</p>
-            <div class="buttons">
-                <a th:href="@{/playlists}" class="btn btn-primary">Ver Playlists</a>
-                <a th:href="@{/genres}" class="btn btn-secondary">Ver Géneros</a>
-            </div>
-        </div>
+
+  <!-- INTRO  -->
+  <div class="intro">
+    Bienvenido a RockList 2025
+  </div>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-bg">
+    <source th:src="@{/video/video_background.mp4}" type="video/mp4"/>
+    Tu navegador no soporta video HTML5 😢
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="content" data-aos="zoom-in">
+    <h1 data-aos="fade-down" data-aos-delay="300">Gestión de Colección de Música</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="600">Organiza tus playlists como una estrella de rock 🤘</p>
+    <div data-aos="fade-up" data-aos-delay="900">
+      <a href="/playlists" class="btn btn-success">🎧 Ver Playlists</a>
+      <a href="/genres" class="btn btn-dark">🎸 Ver Géneros</a>
     </div>
-    <footer>
-        <p>&copy; 2025 Nicolás Butterfield - Licenciatura en Sistemas - UNPA</p>
-    </footer>
+  </div>
+
+  <footer data-aos="fade-up" data-aos-delay="1500">
+    &copy; 2025 Nicolás Butterfield - UNPA - Rockeando la Programación
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>

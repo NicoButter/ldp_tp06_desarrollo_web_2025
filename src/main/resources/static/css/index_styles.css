@@ -1,97 +1,97 @@
- body {
-     font-family: 'Arial', sans-serif;
-     margin: 0;
-     padding: 0;
-     background-color: #f4f4f9;
-     color: #333;
-     display: flex;
-     flex-direction: column;
-     min-height: 100vh;
- }
+  html,
+  body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+  }
 
- header {
-     background-color: #1db954;
-     color: white;
-     text-align: center;
-     padding: 2rem 0;
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
+  /* VIDEO de fondo */
+  .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.3);
+  }
 
- header h1 {
-     margin: 0;
-     font-size: 2.5rem;
- }
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+  }
 
- header p {
-     margin: 0.5rem 0 0;
-     font-size: 1.2rem;
-     opacity: 0.9;
- }
+  /* INTRO */
+  .intro {
+      position: fixed;
+      z-index: 9999;
+      background-color: black;
+      color: white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeOut 3s ease-out 3s forwards;
+      font-size: 2.5rem;
+      font-weight: bold;
+  }
 
- .container {
-     flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 2rem;
-     text-align: center;
- }
+  @keyframes fadeOut {
+      to {
+          opacity: 0;
+          visibility: hidden;
+      }
+  }
 
- .welcome-section {
-     max-width: 600px;
- }
+  /* Contenido principal */
+  .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+  }
 
- .welcome-section h2 {
-     font-size: 2rem;
-     margin-bottom: 1rem;
-     color: #1db954;
- }
+  h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+  }
 
- .welcome-section p {
-     font-size: 1.1rem;
-     margin-bottom: 2rem;
-     color: #666;
- }
+  p.lead {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+  }
 
- .buttons {
-     display: flex;
-     justify-content: center;
-     gap: 1rem;
- }
+  .btn {
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      margin: 0.5rem;
+      border-radius: 50px;
+  }
 
- .btn {
-     display: inline-block;
-     padding: 0.8rem 2rem;
-     text-decoration: none;
-     font-size: 1.1rem;
-     border-radius: 25px;
-     transition: background-color 0.3s, transform 0.1s;
- }
-
- .btn-primary {
-     background-color: #1db954;
-     color: white;
- }
-
- .btn-primary:hover {
-     background-color: #1aa34a;
-     transform: scale(1.05);
- }
-
- .btn-secondary {
-     background-color: #191414;
-     color: white;
- }
-
- .btn-secondary:hover {
-     background-color: #2a2a2a;
-     transform: scale(1.05);
- }
-
- footer {
-     background-color: #191414;
-     color: white;
-     text-align: center;
-     padding: 1rem 0;
-     font-size: 0.9rem;
- }
+  footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9rem;
+      z-index: 2;
+  }
+  
