@@ -49,7 +49,7 @@ Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Program
 1. Cloná este repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/tp6-crud-playlists.git
+   git clone https://github.com/nicobutter/tp6-crud-playlists.git
    cd tp6-crud-playlists
    ```
 
