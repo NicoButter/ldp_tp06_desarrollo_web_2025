@@ -2,9 +2,14 @@ package ar.edu.unpaspotify.model;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 /**
  * Entidad que representa una playlist de Spotify.
@@ -12,8 +17,6 @@ import lombok.Setter;
  */
 @Entity
 @Table(name = "playlist")
-@Getter
-@Setter
 public class Playlist {
 
     @Id
@@ -48,4 +51,54 @@ public class Playlist {
         this.duracionTotal = duracionTotal;
         this.genre = genre;
     }
+
+    // Getters y Setters manuales
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getInterprete() {
+        return interprete;
+    }
+
+    public void setInterprete(String interprete) {
+        this.interprete = interprete;
+    }
+
+    public Integer getCantidadTemas() {
+        return cantidadTemas;
+    }
+
+    public void setCantidadTemas(Integer cantidadTemas) {
+        this.cantidadTemas = cantidadTemas;
+    }
+
+    public BigDecimal getDuracionTotal() {
+        return duracionTotal;
+    }
+
+    public void setDuracionTotal(BigDecimal duracionTotal) {
+        this.duracionTotal = duracionTotal;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
 }

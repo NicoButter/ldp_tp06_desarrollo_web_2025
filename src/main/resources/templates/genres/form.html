@@ -2,17 +2,33 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></title>
-    <link rel="stylesheet" href="/css/styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" th:href="@{/css/genres_form_styles.css}">
+
 </head>
-<body>
-    <h1 th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></h1>
-    <form th:action="@{/genres}" th:object="${genre}" method="post">
-        <input type="hidden" th:field="*{id}">
-        <label for="nombre">Nombre:</label>
-        <input type="text" th:field="*{nombre}" id="nombre" required maxlength="20">
-        <button type="submit">Guardar</button>
-    </form>
-    <a th:href="@{/genres}">Volver</a>
+<body class="genre-form">
+    <div class="genre-form-container">
+        <h1 th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></h1>
+        
+        <form th:action="@{/genres}" th:object="${genre}" method="post">
+            <input type="hidden" th:field="*{id}">
+            
+            <label for="nombre">Nombre del Género:</label>
+            <input type="text" th:field="*{nombre}" id="nombre" required maxlength="20" 
+                   placeholder="Ej: Rock, Pop, Jazz" autofocus>
+            
+            <button type="submit">
+                <i class="fas fa-save"></i> Guardar
+            </button>
+        </form>
+        
+        <a th:href="@{/genres}" class="btn-volver">
+            <i class="fas fa-arrow-left"></i> Volver a la lista
+        </a>
+    </div>
 </body>
 </html>

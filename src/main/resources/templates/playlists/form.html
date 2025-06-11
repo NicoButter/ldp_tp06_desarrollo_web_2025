@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></title>
-    <link rel="stylesheet" href="/css/styles.css">
+    
+  <link rel="stylesheet" th:href="@{/css/playlists_form_styles.css}" />
+    
 </head>
 <body>
     <h1 th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></h1>

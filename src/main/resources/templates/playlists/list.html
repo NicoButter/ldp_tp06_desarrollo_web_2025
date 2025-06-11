@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Playlists</title>
-   
     <link rel="stylesheet" th:href="@{/css/playlist_list_styles.css}">
-
 </head>
 <body>
     <h1>Lista de Playlists</h1>
@@ -30,7 +28,7 @@
                 <td th:text="${playlist.interprete}"></td>
                 <td th:text="${playlist.cantidadTemas}"></td>
                 <td th:text="${playlist.duracionTotal}"></td>
-                <td th:text="${playlist.genero?.nombre}"></td>
+                <td th:text="${playlist.genero?.nombre != null ? playlist.genero.nombre : 'Sin género'}"></td>
                 <td>
                     <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}" class="btn btn-edit">Editar</a>
                     <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}" class="btn btn-delete" onclick="return confirm('¿Estás seguro de eliminar esta playlist?')">Eliminar</a>

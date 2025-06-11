@@ -1,0 +1,116 @@
+ /* Estilos específicos para este formulario (también pueden ir en styles.css) */
+ body.genre-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     background-color: #f4f4f9;
+     margin: 0;
+     padding: 1rem;
+     font-family: 'Arial', sans-serif;
+ }
+
+ .genre-form-container {
+     width: 100%;
+     max-width: 400px;
+     background: white;
+     padding: 2rem;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+
+ .genre-form h1 {
+     color: #1db954;
+     margin-bottom: 1.5rem;
+ }
+
+ .genre-form label {
+     display: block;
+     margin-bottom: 0.5rem;
+     font-weight: bold;
+     color: #555;
+     text-align: left;
+ }
+
+ .genre-form input[type="text"] {
+     width: 100%;
+     padding: 0.75rem;
+     margin-bottom: 1.5rem;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     font-size: 1rem;
+     transition: all 0.3s;
+ }
+
+ .genre-form input[type="text"]:hover {
+     border-color: #aaa;
+ }
+
+ .genre-form input[type="text"]:focus {
+     border-color: #1db954;
+     outline: none;
+     box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
+ }
+
+ .genre-form input:required:invalid {
+     border-left: 3px solid #ff4d4d;
+ }
+
+ .genre-form button[type="submit"] {
+     background-color: #1db954;
+     color: white;
+     padding: 0.75rem;
+     border: none;
+     border-radius: 4px;
+     font-size: 1rem;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     width: 100%;
+     margin-top: 0.5rem;
+ }
+
+ .genre-form button[type="submit"]:hover {
+     background-color: #17a74a;
+ }
+
+ .genre-form .btn-volver {
+     display: inline-block;
+     margin-top: 1.5rem;
+     color: #666;
+     text-decoration: none;
+     transition: color 0.3s;
+ }
+
+ .genre-form .btn-volver:hover {
+     color: #1db954;
+ }
+
+ .genre-form .btn-volver i {
+     margin-right: 5px;
+ }
+
+ .btn-volver {
+     display: inline-block;
+     margin-top: 1.5rem;
+     padding: 0.6rem 1.2rem;
+     background-color: #191414;
+     /* Negro spotify */
+     color: white !important;
+     text-decoration: none !important;
+     border-radius: 4px;
+     font-weight: bold;
+     transition: all 0.3s;
+     border: 2px solid #191414;
+     text-align: center;
+ }
+
+ .btn-volver:hover {
+     background-color: transparent;
+     color: #191414 !important;
+ }
+
+ .btn-volver i {
+     margin-right: 8px;
+ }
