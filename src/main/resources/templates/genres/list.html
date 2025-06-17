@@ -24,12 +24,14 @@
             <tr th:each="genre : ${genres}">
                 <td th:text="${genre.id}"></td>
                 <td th:text="${genre.nombre}"></td>
-                <td>
-                    <a th:href="@{/genres/edit/{id}(id=${genre.id})}">Editar</a>
-                    <a th:href="@{/genres/delete/{id}(id=${genre.id})}">Eliminar</a>
+                <td class="action-links">
+                    <a th:href="@{/genres/edit/{id}(id=${genre.id})}" class="btn btn-edit">Editar</a>
+                    <a th:href="@{/genres/delete/{id}(id=${genre.id})}" class="btn btn-delete" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
                 </td>
             </tr>
         </tbody>
     </table>
 </body>
 </html>
+
+
