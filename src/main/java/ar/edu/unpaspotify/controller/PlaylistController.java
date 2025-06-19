@@ -1,15 +1,19 @@
 package ar.edu.unpaspotify.controller;
 
-import ar.edu.unpaspotify.model.Genre;
-import ar.edu.unpaspotify.model.Playlist;
-import ar.edu.unpaspotify.service.GenreService;
-import ar.edu.unpaspotify.service.PlaylistService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
+import ar.edu.unpaspotify.model.Playlist;
+import ar.edu.unpaspotify.service.GenreService;
+import ar.edu.unpaspotify.service.PlaylistService;
 
 /**
  * Controlador para manejar las operaciones CRUD de playlists.
@@ -26,10 +30,16 @@ public class PlaylistController {
     private GenreService genreService;
 
     // Listar todas las playlists
-    @GetMapping
+   @GetMapping
     public String listPlaylists(Model model) {
         List<Playlist> playlists = playlistService.findAll();
         model.addAttribute("playlists", playlists);
+
+        // Le indicás al layout qué fragmentos cargar
+        model.addAttribute("headSection", "playlists/list :: styles");
+        model.addAttribute("bodyContent", "playlists/list :: contenido");
+        model.addAttribute("bodyScripts", "playlists/list :: scripts");
+
         return "playlists/list";
     }
 

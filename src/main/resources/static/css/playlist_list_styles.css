@@ -64,11 +64,13 @@
  }
 
  .btn-back {
-    background-color: #666; /* Gris neutro */
-    color: white;
-    margin-top: 1rem;
-}
+     background-color: #666;
+     /* Gris neutro */
+     color: white;
+     margin-top: 1rem;
+ }
 
-.btn-back:hover {
-    background-color: #555; /* Gris oscuro al pasar el mouse */
-}
+ .btn-back:hover {
+     background-color: #555;
+     /* Gris oscuro al pasar el mouse */
+ }

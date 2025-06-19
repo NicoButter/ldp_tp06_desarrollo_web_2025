@@ -1,43 +1,50 @@
-<!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Playlists</title>
-    <link rel="stylesheet" th:href="@{/css/playlist_list_styles.css}">
-</head>
-<body>
-    <h1>Lista de Playlists</h1>
-    <a th:href="@{/playlists/new}" class="btn btn-add">Agregar Nueva Playlist</a>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Intérprete</th>
-                <th>Cantidad de Temas</th>
-                <th>Duración Total</th>
-                <th>Género</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="playlist : ${playlists}">
-                <td th:text="${playlist.id}"></td>
-                <td th:text="${playlist.titulo}"></td>
-                <td th:text="${playlist.interprete}"></td>
-                <td th:text="${playlist.cantidadTemas}"></td>
-                <td th:text="${playlist.duracionTotal}"></td>
-                <td th:text="${playlist.genre != null ? playlist.genre.nombre : 'Sin género'}"></td>
-                <td>
-                    <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}" class="btn btn-edit">Editar</a>
-                    <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}" class="btn btn-delete" onclick="return confirm('¿Estás seguro de eliminar esta playlist?')">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div style="text-align: right; margin-top: 1.5rem;">
-        <a th:href="@{/}" class="btn btn-back">Volver al Inicio</a>
+<!-- styles fragment -->
+<th:block th:fragment="styles">
+    <link rel="stylesheet" th:href="@{/css/playlist_list_styles.css}" />
+</th:block>
+
+<!-- contenido fragment -->
+<th:block th:fragment="contenido">
+    <div class="container my-5">
+        <h1 class="mb-4 text-success">Lista de Playlists</h1>
+        <a th:href="@{/playlists/new}" class="btn btn-success mb-3">Agregar Nueva Playlist</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Intérprete</th>
+                    <th>Cantidad de Temas</th>
+                    <th>Duración Total</th>
+                    <th>Género</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="playlist : ${playlists}">
+                    <td th:text="${playlist.id}"></td>
+                    <td th:text="${playlist.titulo}"></td>
+                    <td th:text="${playlist.interprete}"></td>
+                    <td th:text="${playlist.cantidadTemas}"></td>
+                    <td th:text="${playlist.duracionTotal}"></td>
+                    <td th:text="${playlist.genre != null ? playlist.genre.nombre : 'Sin género'}"></td>
+                    <td>
+                        <a th:href="@{/playlists/edit/{id}(id=${playlist.id})}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{/playlists/delete/{id}(id=${playlist.id})}" class="btn btn-danger btn-sm"
+                           onclick="return confirm('¿Estás seguro de eliminar esta playlist?')">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-end mt-4">
+            <a th:href="@{/}" class="btn btn-secondary">Volver al Inicio</a>
+        </div>
     </div>
-</body>
-</html>
+</th:block>
+
+<!-- scripts fragment -->
+<th:block th:fragment="scripts">
+    <script>
+        console.log("Página de Listas de reproducción cargada");
+    </script>
+</th:block>

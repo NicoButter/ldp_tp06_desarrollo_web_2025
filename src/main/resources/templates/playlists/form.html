@@ -1,30 +1,52 @@
-<!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></title>
-    
-  <link rel="stylesheet" th:href="@{/css/playlists_form_styles.css}" />
-    
-</head>
-<body>
-    <h1 th:text="${playlist.id} ? 'Editar Playlist' : 'Crear Playlist'"></h1>
-    <form th:action="@{/playlists}" th:object="${playlist}" method="post">
-        <input type="hidden" th:field="*{id}">
-        <label for="titulo">Título:</label>
-        <input type="text" th:field="*{titulo}" id="titulo" required maxlength="50">
-        <label for="interprete">Intérprete:</label>
-        <input type="text" th:field="*{interprete}" id="interprete" maxlength="40">
-        <label for="cantidadTemas">Cantidad de Temas:</label>
-        <input type="number" th:field="*{cantidadTemas}" id="cantidadTemas" min="0" max="999">
-        <label for="duracionTotal">Duración Total (min):</label>
-        <input type="number" th:field="*{duracionTotal}" id="duracionTotal" step="0.01" min="0" max="99999.99">
-        <label for="genre">Género:</label>
-        <select th:field="*{genre}" id="genre" required>
-            <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.nombre}"></option>
-        </select>
-        <button type="submit">Guardar</button>
-    </form>
-    <a th:href="@{/playlists}">Volver</a>
-</body>
-</html>
+<!-- styles fragment -->
+<th:block th:fragment="styles">
+    <link rel="stylesheet" th:href="@{/css/playlists_form_styles.css}" />
+</th:block>
+
+<!-- contenido fragment -->
+<th:block th:fragment="contenido">
+    <div class="container my-5">
+        <h1 th:text="${playlist.id} != null ? 'Editar Playlist' : 'Crear Playlist'"></h1>
+
+        <form th:action="@{/playlists}" th:object="${playlist}" method="post" class="mb-4">
+            <input type="hidden" th:field="*{id}">
+            
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título:</label>
+                <input type="text" th:field="*{titulo}" id="titulo" class="form-control" required maxlength="50">
+            </div>
+
+            <div class="mb-3">
+                <label for="interprete" class="form-label">Intérprete:</label>
+                <input type="text" th:field="*{interprete}" id="interprete" class="form-control" maxlength="40">
+            </div>
+
+            <div class="mb-3">
+                <label for="cantidadTemas" class="form-label">Cantidad de Temas:</label>
+                <input type="number" th:field="*{cantidadTemas}" id="cantidadTemas" class="form-control" min="0" max="999">
+            </div>
+
+            <div class="mb-3">
+                <label for="duracionTotal" class="form-label">Duración Total (min):</label>
+                <input type="number" th:field="*{duracionTotal}" id="duracionTotal" class="form-control" step="0.01" min="0" max="99999.99">
+            </div>
+
+            <div class="mb-3">
+                <label for="genre" class="form-label">Género:</label>
+                <select th:field="*{genre}" id="genre" class="form-select" required>
+                    <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.nombre}"></option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">💾 Guardar</button>
+            <a th:href="@{/playlists}" class="btn btn-secondary">↩️ Volver</a>
+        </form>
+    </div>
+</th:block>
+
+<!-- scripts fragment -->
+<th:block th:fragment="scripts">
+    <script>
+        console.log("📝 Formulario cargado correctamente");
+    </script>
+</th:block>

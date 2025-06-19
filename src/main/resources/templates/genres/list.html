@@ -1,37 +1,50 @@
-<!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head>
+<th:block
+    th:with="headSection=~{::styles},
+             bodyContent=~{::contenido},
+             bodyScripts=~{::scripts}">
 
-    <meta charset="UTF-8">
-    <title>Géneros Musicales</title>
+    <th:block th:replace="fragments/layout :: base('Géneros Musicales')" />
+</th:block>
 
-    <link rel="stylesheet" th:href="@{/css/genres_list_styles.css}">
+<!-- Estilos específicos -->
+<th:block th:fragment="styles">
+    <link rel="stylesheet" th:href="@{/css/genres_list_styles.css}" />
+</th:block>
 
-</head>
-<body>
-    <h1>Géneros Musicales</h1>
-    <a class="btn btn-add" th:href="@{/genres/new}">Crear nuevo género</a>
-    <a class="btn btn-back" th:href="@{/playlists}">Volver a playlists</a>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="genre : ${genres}">
-                <td th:text="${genre.id}"></td>
-                <td th:text="${genre.nombre}"></td>
-                <td class="action-links">
-                    <a th:href="@{/genres/edit/{id}(id=${genre.id})}" class="btn btn-edit">Editar</a>
-                    <a th:href="@{/genres/delete/{id}(id=${genre.id})}" class="btn btn-delete" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+<!-- Contenido principal -->
+<th:block th:fragment="contenido">
+    <div class="genre-list-container">
+        <h1>Géneros Musicales</h1>
 
+        <a class="btn btn-add" th:href="@{/genres/new}">Crear nuevo género</a>
+        <a class="btn btn-back" th:href="@{/playlists}">Volver a playlists</a>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="genre : ${genres}">
+                    <td th:text="${genre.id}"></td>
+                    <td th:text="${genre.nombre}"></td>
+                    <td class="action-links">
+                        <a th:href="@{/genres/edit/{id}(id=${genre.id})}" class="btn btn-edit">Editar</a>
+                        <a th:href="@{/genres/delete/{id}(id=${genre.id})}" class="btn btn-delete"
+                           onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</th:block>
+
+<!-- Scripts específicos -->
+<th:block th:fragment="scripts">
+    <script>
+        console.log("Listado de géneros cargado correctamente 🎧");
+    </script>
+</th:block>
