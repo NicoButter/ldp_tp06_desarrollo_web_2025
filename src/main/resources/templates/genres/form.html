@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<!-- Paso 1: Definimos estilos, contenido y scripts -->
+<!-- estilos, contenido y scripts -->
 <th:block
     th:with="headSection=~{::styles},
              bodyContent=~{::contenido},
              bodyScripts=~{::scripts}">
 
-    <!-- Paso 2: Reutilizamos el layout -->
+    <!-- Reutilización el layout -->
     <th:block th:replace="fragments/layout :: head(${genre.id} != null ? 'Editar Género' : 'Crear Género')" />
 </th:block>
 
@@ -42,6 +42,6 @@
 <!-- Scripts específicos (si querés agregar más luego) -->
 <th:block th:fragment="scripts">
     <script>
-        console.log("Formulario de género cargado con éxito 🎶");
+        console.log("Formulario de género cargado con éxito");
     </script>
 </th:block>
