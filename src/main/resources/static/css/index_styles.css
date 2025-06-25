@@ -1,96 +1,166 @@
-  html,
-  body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      overflow: hidden;
-  }
+/*
+  ==============================================
+  Archivo: index_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos para la página principal del proyecto Spotify CRUD.
+              Incluye diseño full-screen con video de fondo, animación introductoria y botones destacados.
+  ==============================================
+*/
 
-  /* VIDEO de fondo */
-  .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -2;
-      filter: brightness(0.8);
-  }
 
-  .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-  }
+/* ==========================================================================
+   Configuración base del documento
+   ========================================================================== */
 
-  /* INTRO */
-  .intro {
-      position: fixed;
-      z-index: 9999;
-      background-color: black;
-      color: white;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: fadeOut 1.5s ease-out 1.5s forwards;
-      font-size: 2.5rem;
-      font-weight: bold;
-  }
+/**
+ * Reset básico para evitar márgenes y padding por defecto.
+ * Se establece altura completa y fuente legible.
+ */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden; /* Evita scroll vertical */
+}
 
-  @keyframes fadeOut {
-      to {
-          opacity: 0;
-          visibility: hidden;
-      }
-  }
 
-  /* Contenido principal */
-  .content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-  }
+/* ==========================================================================
+   Fondo con video dinámico
+   ========================================================================== */
 
-  h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-  }
+/**
+ * Video de fondo que cubre toda la pantalla.
+ * Se ajusta automáticamente al tamaño del viewport.
+ */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.8); /* Oscurece ligeramente el video */
+}
 
-  p.lead {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-  }
+/**
+ * Overlay semitransparente sobre el video para mejorar contraste del texto.
+ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
-  .btn {
-      font-size: 1.2rem;
-      padding: 0.75rem 2rem;
-      margin: 0.5rem;
-      border-radius: 50px;
-  }
 
-  footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.7);
-      font-size: 0.9rem;
-      z-index: 2;
-  }
+/* ==========================================================================
+   Animación Introductoria (Splash Screen)
+   ========================================================================== */
+
+/**
+ * Pantalla de introducción que se muestra al cargar la página.
+ * Centrada y con texto grande, desaparece con una animación suave.
+ */
+.intro {
+    position: fixed;
+    z-index: 9999;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 1.5s ease-out 1.5s forwards;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/**
+ * Animación para ocultar suavemente la pantalla de inicio.
+ */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* ==========================================================================
+   Contenido Principal de la Página
+   ========================================================================== */
+
+/**
+ * Contenedor principal de contenido visible.
+ * Centrado tanto vertical como horizontalmente.
+ */
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+/**
+ * Título principal de la página.
+ */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/**
+ * Texto destacado debajo del título.
+ */
+p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/**
+ * Botón estilizado usado en la página de inicio.
+ */
+.btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    margin: 0.5rem;
+    border-radius: 50px;
+}
+
+
+/* ==========================================================================
+   Footer de la página
+   ========================================================================== */
+
+/**
+ * Pie de página fijo en la parte inferior.
+ * Con semi-transparente para no interferir con el fondo.
+ */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    z-index: 2;
+}

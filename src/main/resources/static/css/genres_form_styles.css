@@ -1,64 +1,119 @@
-/* General container styling */
+/*
+  ==============================================
+  Archivo: genres_form_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos para la lista de playlists.
+  ==============================================
+*/
+
+/* ==========================================================================
+   Contenedor Principal del Formulario de Género
+   ========================================================================== */
+
+/**
+ * Estilos para el contenedor principal del formulario.
+ * Centraliza el formulario en la pantalla con un diseño limpio y moderno.
+ */
 .genre-form-container {
     width: 100%;
-    max-width: 450px; /* Ligeramente más ancho para mejor legibilidad */
-    margin: 2rem auto; /* Centrado vertical y horizontal */
+    max-width: 450px;
+    margin: 2rem auto;
     background: #ffffff;
-    padding: 2.5rem; /* Más espacio interno */
-    border-radius: 12px; /* Bordes más suaves */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente moderna */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Heading */
+/* ==========================================================================
+   Título del Formulario
+   ========================================================================== */
+
+/**
+ * Estilo del encabezado principal del formulario.
+ * Destaca visualmente el título con el color identitario de la aplicación.
+ */
 .genre-form-container h1 {
-    color: #1db954;
-    font-size: 1.75rem; /* Tamaño más prominente */
+    color: #1db954; /* Verde Spotify */
+    font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-/* Labels */
+/* ==========================================================================
+   Etiquetas (Labels)
+   ========================================================================== */
+
+/**
+ * Estilo general de las etiquetas del formulario.
+ * Mejora legibilidad y alinea el texto a la izquierda.
+ */
 .genre-form-container label {
     display: block;
     margin-bottom: 0.75rem;
     font-weight: 500;
-    color: #333; /* Mayor contraste */
+    color: #333;
     text-align: left;
     font-size: 0.95rem;
 }
 
-/* Input fields */
+/* ==========================================================================
+   Campos de Entrada (Inputs)
+   ========================================================================== */
+
+/**
+ * Estilo base de los campos de texto del formulario.
+ * Incluye transiciones suaves y estilizado de bordes y sombras.
+ */
 .genre-form-container input[type="text"] {
     width: 100%;
-    padding: 0.875rem; /* Más espacio interno */
+    padding: 0.875rem;
     margin-bottom: 1.75rem;
-    border: 1px solid #d1d5db; /* Gris más suave */
-    border-radius: 6px; /* Bordes más redondeados */
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f9fafb; /* Fondo claro para mejor UX */
+    background-color: #f9fafb;
 }
 
+/**
+ * Efecto hover sobre los campos de texto.
+ */
 .genre-form-container input[type="text"]:hover {
     border-color: #9ca3af; /* Gris más oscuro en hover */
 }
 
+/**
+ * Foco activo: resalta visualmente el campo seleccionado.
+ */
 .genre-form-container input[type="text"]:focus {
     border-color: #1db954;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.15); /* Sombra más suave */
+    box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.15);
     background-color: #ffffff;
 }
 
-/* Invalid state */
+/**
+ * Estado inválido: indica visualmente errores en los campos obligatorios.
+ */
 .genre-form-container input:required:invalid {
-    border-left: 4px solid #ef4444; /* Rojo más vibrante */
-    background-color: #fef2f2; /* Fondo sutil para indicar error */
+    border-left: 4px solid #ef4444; /* Rojo de error */
+    background-color: #fef2f2;
 }
 
-/* Submit button */
+/* ==========================================================================
+   Botón de Envío (Submit)
+   ========================================================================== */
+
+/**
+ * Estilo principal del botón de envío.
+ * Usa colores destacados y efectos de interacción.
+ */
 .genre-form-container button[type="submit"] {
     background-color: #1db954;
     color: #ffffff;
@@ -75,19 +130,26 @@
 
 .genre-form-container button[type="submit"]:hover {
     background-color: #15803d; /* Verde más oscuro */
-    transform: translateY(-1px); /* Efecto de elevación */
+    transform: translateY(-1px); /* Efecto sutil de elevación */
 }
 
 .genre-form-container button[type="submit"]:active {
-    transform: translateY(0); /* Vuelve a posición original */
+    transform: translateY(0); /* Restablece posición al hacer clic */
 }
 
-/* Cancel button */
+/* ==========================================================================
+   Botón de Volver
+   ========================================================================== */
+
+/**
+ * Estilo del botón de cancelar/volver.
+ * Diseño limpio con efecto de cambio de estado al interactuar.
+ */
 .genre-form-container .btn-volver {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #191414;
+    background-color: #191414; /* Negro elegante */
     color: #ffffff !important;
     text-decoration: none !important;
     border-radius: 6px;
@@ -103,7 +165,14 @@
     border-color: #191414;
 }
 
-/* Responsive design */
+/* ==========================================================================
+   Diseño Responsivo
+   ========================================================================== */
+
+/**
+ * Ajustes para dispositivos móviles pequeños.
+ * Optimiza el tamaño del contenedor y tipografía.
+ */
 @media (max-width: 480px) {
     .genre-form-container {
         padding: 1.5rem;

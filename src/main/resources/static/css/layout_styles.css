@@ -1,3 +1,28 @@
+/*
+  ==============================================
+  Archivo: layout_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos base utilizados en la plantilla general del proyecto (layout.html).
+               Define la estructura principal, cuerpo y pie de página.
+  ==============================================
+*/
+
+
+/* ==========================================================================
+   Estilos generales del cuerpo de la página
+   ========================================================================== */
+
+/**
+ * Configuración básica del body:
+ * - Sin margen
+ * - Fuente limpia y legible
+ * - Color de texto por defecto
+ * - Altura mínima para ocupar toda la pantalla
+ */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -5,10 +30,31 @@ body {
     min-height: 100vh;
 }
 
+
+/* ==========================================================================
+   Contenido principal (main)
+   ========================================================================== */
+
+/**
+ * Sección <main> donde se inserta el contenido dinámico.
+ * Agrega padding vertical para separar del borde superior/inferior.
+ */
 main {
     padding: 2rem 0;
 }
 
+
+/* ==========================================================================
+   Pie de página (footer)
+   ========================================================================== */
+
+/**
+ * Estilo básico del footer:
+ * - Centrado de texto
+ * - Color suave
+ * - Línea divisoria superior
+ * - Espaciado interno y margen superior para separación visual
+ */
 footer {
     text-align: center;
     font-size: 0.9rem;

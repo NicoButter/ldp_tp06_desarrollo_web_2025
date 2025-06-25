@@ -1,4 +1,27 @@
-/* Estilos generales del formulario */
+/*
+  ==============================================
+  Archivo: playlists_form_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos utilizados en el formulario de gestión de playlists.
+               Incluye diseño general del formulario, campos de entrada y botones.
+  ==============================================
+*/
+
+
+/* ==========================================================================
+   Estilos generales del documento
+   ========================================================================== */
+
+/**
+ * Configuración básica del cuerpo de la página:
+ * - Tipografía legible
+ * - Color de fondo suave
+ * - Sin márgenes ni padding por defecto
+ */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -7,11 +30,24 @@ body {
     color: #333;
 }
 
+/**
+ * Título principal del formulario.
+ * Destacado con el color identitario del proyecto.
+ */
 h1 {
     color: #1db954;
     margin-bottom: 1.5rem;
 }
 
+
+/* ==========================================================================
+   Contenedor del formulario
+   ========================================================================== */
+
+/**
+ * Formulario centrado con diseño moderno y sombra.
+ * Máximo ancho definido y margen automático para centrarlo horizontalmente.
+ */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -21,7 +57,16 @@ form {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para etiquetas y campos de entrada */
+
+/* ==========================================================================
+   Campos de entrada y etiquetas
+   ========================================================================== */
+
+/**
+ * Etiquetas de formulario:
+ * - Mostradas como bloque
+ * - Con peso fuerte y color gris oscuro
+ */
 label {
     display: block;
     margin-bottom: 0.5rem;
@@ -29,6 +74,12 @@ label {
     color: #555;
 }
 
+/**
+ * Campos de texto, número y select:
+ * - Ancho total
+ * - Padding uniforme
+ * - Bordes suaves y transición visual
+ */
 input[type="text"],
 input[type="number"],
 select {
@@ -41,6 +92,11 @@ select {
     transition: border-color 0.3s;
 }
 
+/**
+ * Foco en los campos:
+ * - Cambio de color de borde al interactuar
+ * - Sin contorno predeterminado del navegador
+ */
 input[type="text"]:focus,
 input[type="number"]:focus,
 select:focus {
@@ -48,7 +104,17 @@ select:focus {
     outline: none;
 }
 
-/* Estilo para el botón de guardar */
+
+/* ==========================================================================
+   Botón de envío
+   ========================================================================== */
+
+/**
+ * Botón principal del formulario:
+ * - Diseño llamativo
+ * - Transición suave
+ * - Ancho completo y margen superior
+ */
 button[type="submit"] {
     background-color: #1db954;
     color: white;
@@ -63,11 +129,22 @@ button[type="submit"] {
     margin-top: 1rem;
 }
 
+/**
+ * Efecto hover sobre el botón de envío.
+ */
 button[type="submit"]:hover {
     background-color: #17a74a;
 }
 
-/* Estilo para el enlace "Volver" */
+
+/* ==========================================================================
+   Enlace "Volver"
+   ========================================================================== */
+
+/**
+ * Enlace para regresar a la lista de playlists.
+ * Diseño limpio con efecto de cambio de color al pasar el mouse.
+ */
 a {
     display: inline-block;
     margin-top: 1.5rem;

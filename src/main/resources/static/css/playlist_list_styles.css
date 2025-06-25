@@ -1,3 +1,27 @@
+/*
+  ==============================================
+  Archivo: playlist_list_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos utilizados en la página de listado de playlists.
+               Incluye diseño de tabla, botones y layout general.
+  ==============================================
+*/
+
+
+/* ==========================================================================
+   Estilos base del documento
+   ========================================================================== */
+
+/**
+ * Configuración básica del cuerpo de la página:
+ * - Tipografía legible
+ * - Color de fondo suave
+ * - Sin márgenes ni padding por defecto
+ */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
@@ -6,6 +30,10 @@ body {
     padding: 0;
 }
 
+/**
+ * Contenedor principal del contenido.
+ * Máximo ancho definido, centrado y con sombra para destacar.
+ */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -15,17 +43,35 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
+/**
+ * Título principal de la página.
+ * Color identitario y peso fuerte para resaltar contenido.
+ */
 h1 {
     color: #1db954;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-/* Tabla */
+
+/* ==========================================================================
+   Estilos de Tabla
+   ========================================================================== */
+
+/**
+ * Contenedor responsivo para tablas anchas.
+ * Permite scroll horizontal en dispositivos pequeños.
+ */
 .table-responsive {
     overflow-x: auto;
 }
 
+/**
+ * Estilo base de las tablas:
+ * - Ancho total
+ * - Sin separación entre celdas
+ * - Altura mínima para evitar colapsos en pantallas pequeñas
+ */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -33,6 +79,12 @@ table {
     min-width: 800px;
 }
 
+/**
+ * Celdas de tabla:
+ * - Padding uniforme
+ * - Texto alineado a la izquierda
+ * - Separador inferior sencillo
+ */
 th,
 td {
     padding: 1rem;
@@ -40,17 +92,36 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+/**
+ * Encabezado de tabla:
+ * - Fondo identitario
+ * - Texto blanco
+ * - Peso medio para diferenciarse del título
+ */
 th {
     background-color: #1db954;
     color: white;
     font-weight: 600;
 }
 
+/**
+ * Efecto hover sobre filas:
+ * Mejora la interacción visual del usuario.
+ */
 tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Botones */
+
+/* ==========================================================================
+   Botones Generales
+   ========================================================================== */
+
+/**
+ * Estilo base de los botones:
+ * - Diseño flexible y reutilizable
+ * - Transición suave para mejor experiencia de usuario
+ */
 .btn {
     display: inline-block;
     padding: 0.4rem 0.8rem;
@@ -64,6 +135,9 @@ tr:hover {
     text-align: center;
 }
 
+/**
+ * Botón de acción positiva (ej: Agregar).
+ */
 .btn-success {
     background-color: #1db954;
     color: white;
@@ -73,6 +147,9 @@ tr:hover {
     background-color: #1aa34a;
 }
 
+/**
+ * Botón de edición.
+ */
 .btn-warning {
     background-color: #ffc107;
     color: #212529;
@@ -82,6 +159,9 @@ tr:hover {
     background-color: #e0a800;
 }
 
+/**
+ * Botón de eliminación.
+ */
 .btn-danger {
     background-color: #ff4d4d;
     color: white;
@@ -91,6 +171,9 @@ tr:hover {
     background-color: #e60000;
 }
 
+/**
+ * Botón secundario (ej: Volver).
+ */
 .btn-secondary {
     background-color: #6c757d;
     color: white;
@@ -100,12 +183,27 @@ tr:hover {
     background-color: #5a6268;
 }
 
-/* Acciones en tabla */
+
+/* ==========================================================================
+   Acciones dentro de la tabla
+   ========================================================================== */
+
+/**
+ * Espaciado entre botones consecutivos en la misma celda.
+ */
 td .btn+.btn {
     margin-left: 0.5rem;
 }
 
-/* Volver al inicio */
+
+/* ==========================================================================
+   Botón de Volver al Inicio
+   ========================================================================== */
+
+/**
+ * Enlace para regresar al inicio desde el listado.
+ * Alineado a la derecha y con margen superior.
+ */
 .back-link {
     display: block;
     text-align: right;

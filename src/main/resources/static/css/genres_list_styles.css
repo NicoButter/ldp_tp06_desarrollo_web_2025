@@ -1,4 +1,24 @@
-/* Estilos base */
+/*
+  ==============================================
+  Archivo: genres_list_styles.css
+  Trabajo Práctico N°06 - Laboratorio de Programación
+  Materia: Laboratorio de Programación
+  Alumno: Nicolás Butterfield
+  Universidad Nacional de la Patagonia Austral (UNPA)
+  Año: 2025
+  Descripción: Estilos generales utilizados en la página principal y otros componentes reutilizables.
+  ==============================================
+*/
+
+
+/* ==========================================================================
+   Estilos Base del Documento
+   ========================================================================== */
+
+/**
+ * Configuración general del cuerpo de la página.
+ * Define tipografía, colores base y márgenes globales.
+ */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,18 +27,33 @@ body {
     color: #333;
 }
 
+/**
+ * Contenedor principal con ancho máximo para centrar contenido.
+ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/**
+ * Título principal de las páginas.
+ * Color identitario y tamaño destacado.
+ */
 h1 {
-    color: #1db954;
+    color: #1db954; /* Verde Spotify */
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
 
-/* Estilos para la tabla */
+
+/* ==========================================================================
+   Estilos de Tabla General
+   ========================================================================== */
+
+/**
+ * Estilo base de las tablas.
+ * Incluye sombra sutil, margen superior y diseño responsivo.
+ */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -26,6 +61,9 @@ table {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/**
+ * Celdas de tabla: padding y bordes uniformes.
+ */
 th,
 td {
     padding: 1rem;
@@ -33,21 +71,38 @@ td {
     text-align: left;
 }
 
+/**
+ * Encabezado de tabla: fondo y texto destacado.
+ */
 th {
     background-color: #1db954;
     color: white;
     font-weight: bold;
 }
 
+/**
+ * Filas pares: fondo claro para mejorar legibilidad.
+ */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+/**
+ * Efecto hover sobre filas para interacción visual.
+ */
 tr:hover {
     background-color: #f0f0f0;
 }
 
-/* Estilos para botones y enlaces */
+
+/* ==========================================================================
+   Botones Generales y Acciones
+   ========================================================================== */
+
+/**
+ * Contenedor de botones de acción.
+ * Usa flexbox para alinear botones horizontalmente.
+ */
 .action-buttons {
     display: flex;
     gap: 1rem;
@@ -55,6 +110,10 @@ tr:hover {
     flex-wrap: wrap;
 }
 
+/**
+ * Estilo base de los botones.
+ * Diseño flexible y reutilizable para diferentes acciones.
+ */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -67,10 +126,16 @@ tr:hover {
     font-size: 0.9rem;
 }
 
+/**
+ * Iconos dentro de botones: tamaño reducido.
+ */
 .btn i {
     font-size: 0.9em;
 }
 
+/**
+ * Botón para agregar nuevos elementos.
+ */
 .btn-add {
     background-color: #1db954;
     color: white;
@@ -82,6 +147,9 @@ tr:hover {
     border-color: #17a74a;
 }
 
+/**
+ * Botón para volver atrás.
+ */
 .btn-back {
     background-color: #191414;
     color: white;
@@ -93,13 +161,23 @@ tr:hover {
     border-color: #2a2a2a;
 }
 
-/* Botones de acción en la tabla */
+
+/* ==========================================================================
+   Botones de Acción en Tablas
+   ========================================================================== */
+
+/**
+ * Contenedor de botones de edición y eliminación dentro de tablas.
+ */
 .action-links {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
+/**
+ * Botón de edición: estilo oscuro y profesional.
+ */
 .btn-edit {
     background-color: #191414;
     color: white;
@@ -112,6 +190,9 @@ tr:hover {
     border-color: #2a2a2a;
 }
 
+/**
+ * Botón de eliminación: color rojo para advertencia.
+ */
 .btn-delete {
     background-color: #ff4d4d;
     color: white;
@@ -124,7 +205,15 @@ tr:hover {
     border-color: #e60000;
 }
 
-/* Responsive */
+
+/* ==========================================================================
+   Diseño Responsivo
+   ========================================================================== */
+
+/**
+ * Ajustes visuales para pantallas pequeñas.
+ * Cambia la orientación de botones a vertical.
+ */
 @media (max-width: 768px) {
     .action-buttons {
         flex-direction: column;
