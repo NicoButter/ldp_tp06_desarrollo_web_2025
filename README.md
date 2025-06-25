@@ -41,39 +41,43 @@ Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Program
 - `src/main/resources/templates`: Vistas HTML con Thymeleaf
 - `src/main/resources/application.properties`: Configuraciones del proyecto
 - `static`: Archivos estáticos (CSS, JS, imágenes)
-src
- └── main
-     ├── java
-     │   └── ar.edu.unpaspotify
-     │       ├── controller
-     │       │   ├── GenreController.java
-     │       │   └── PlaylistController.java
-     │       ├── model
-     │       │   ├── Genre.java
-     │       │   └── Playlist.java
-     │       ├── repository
-     │       │   ├── GenreRepository.java
-     │       │   └── PlaylistRepository.java
-     │       ├── service
-     │       │   ├── GenreService.java
-     │       │   └── PlaylistService.java
-     │       └── SpotifyCrudApplication.java
-     └── resources
-         ├── application.properties
-         ├── static
-         │   ├── css
-         │   ├── img
-         │   └── video
-         └── templates
-             ├── fragments
-             │   └── layout.html
-             ├── genres
-             │   ├── form.html
-             │   └── list.html
-             ├── index.html
-             └── playlists
-                 ├── form.html
-                 └── list.html
+
+```
+📁 src
+└── 📁 main
+├── 📁 java
+│ └── 📁 ar.edu.unpaspotify
+│ ├── 📁 controller
+│ │ ├── GenreController.java
+│ │ └── PlaylistController.java
+│ ├── 📁 model
+│ │ ├── Genre.java
+│ │ └── Playlist.java
+│ ├── 📁 repository
+│ │ ├── GenreRepository.java
+│ │ └── PlaylistRepository.java
+│ ├── 📁 service
+│ │ ├── GenreService.java
+│ │ └── PlaylistService.java
+│ └── SpotifyCrudApplication.java
+└── 📁 resources
+├── application.properties
+├── 📁 static
+│ ├── 📁 css
+│ ├── 📁 img
+│ └── 📁 video
+└── 📁 templates
+├── 📁 fragments
+│ └── layout.html
+├── 📁 genres
+│ ├── form.html
+│ └── list.html
+├── index.html
+└── 📁 playlists
+├── form.html
+└── list.html
+
+```
 ---
 
 ## 🚀 ¿Cómo correr el proyecto?
