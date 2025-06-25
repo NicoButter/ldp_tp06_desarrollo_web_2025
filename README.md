@@ -48,30 +48,30 @@ Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Program
 ├── 📁 java
 │ └── 📁 ar.edu.unpaspotify
 │ ├── 📁 controller
-│ │ ├── GenreController.java
-│ │ └── PlaylistController.java
+│ │    ├── GenreController.java
+│ │    └── PlaylistController.java
 │ ├── 📁 model
-│ │ ├── Genre.java
-│ │ └── Playlist.java
+│ │    ├── Genre.java
+│ │    └── Playlist.java
 │ ├── 📁 repository
-│ │ ├── GenreRepository.java
-│ │ └── PlaylistRepository.java
+│ │    ├── GenreRepository.java
+│ │    └── PlaylistRepository.java
 │ ├── 📁 service
-│ │ ├── GenreService.java
-│ │ └── PlaylistService.java
+│ │    ├── GenreService.java
+│ │    └── PlaylistService.java
 │ └── SpotifyCrudApplication.java
 └── 📁 resources
 ├── application.properties
 ├── 📁 static
-│ ├── 📁 css
-│ ├── 📁 img
-│ └── 📁 video
+│   ├── 📁 css
+│   ├── 📁 img
+│   └── 📁 video
 └── 📁 templates
 ├── 📁 fragments
-│ └── layout.html
+│   └── layout.html
 ├── 📁 genres
-│ ├── form.html
-│ └── list.html
+│   ├── form.html
+│   └── list.html
 ├── index.html
 └── 📁 playlists
 ├── form.html
