@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<th:block
-    th:with="headSection=~{::styles},
-             bodyContent=~{::contenido},
-             bodyScripts=~{::scripts}">
-             
-    <th:block th:replace="fragments/layout :: base('Inicio - RockList 2025')" />
-</th:block>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <!-- Definí primero las variables -->
+    <th:block th:with="title='Página Principal',
+                       headSection=~{this :: styles},
+                       bodyContent=~{this :: contenido},
+                       bodyScripts=~{this :: scripts}">
 
-<th:block th:fragment="styles">
-    <link rel="stylesheet" th:href="@{/css/index_styles.css}" />
-</th:block>
+        <!-- Ahora sí hacé el replace -->
+        <th:block th:replace="~{fragments/layout :: base(${title})}" />
 
-<th:block th:fragment="contenido">
-    <div class="intro">
-        Bienvenido a <strong>RockList 2025</strong>
-    </div>
+        <!-- Fragmentos -->
+        <th:block th:fragment="styles">
+            <link rel="stylesheet" th:href="@{/css/index_styles.css}" />
+        </th:block>
 
-    <video autoplay muted loop class="video-bg">
-        <source th:src="@{/video/video_background.mp4}" type="video/mp4" />
-        Tu navegador no soporta video HTML5 😢
-    </video>
+        <th:block th:fragment="contenido">
+            <div class="intro">
+                <strong>Laboratorio de Programación - CRUD 2025 - Playlists de Spotify</strong>
+            </div>
 
-    <div class="overlay"></div>
+            <video autoplay muted loop class="video-bg">
+                <source th:src="@{/video/video_background.mp4}" type="video/mp4" />
+                Tu navegador no soporta video HTML5 😢
+            </video>
 
-    <div class="content" data-aos="zoom-in">
-        <h1 data-aos="fade-down" data-aos-delay="300">Gestión de Colección de Música</h1>
-        <p class="lead" data-aos="fade-up" data-aos-delay="600">
-            Organiza tus playlists como una estrella de rock 
-        </p>
-        <div data-aos="fade-up" data-aos-delay="900">
-            <a th:href="@{/playlists}" class="btn btn-success">Ver Playlists</a>
-            <a th:href="@{/genres}" class="btn btn-dark">Ver Géneros</a>
-        </div>
-    </div>
-</th:block>
+            <div class="overlay"></div>
 
-<th:block th:fragment="scripts">
-    <script>
-        console.log("Inicio cargado como un riff de AC/DC ⚡");
-    </script>
-</th:block>
+            <div class="content" data-aos="zoom-in">
+                <h1 data-aos="fade-down" data-aos-delay="300">Bienvenido al CRUD para Gestión de Playlists</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="600">
+                    Organizá tus Playlists como una estrella de rock !!
+                </p>
+                <div data-aos="fade-up" data-aos-delay="900">
+                    <a th:href="@{/playlists}" class="btn btn-primary me-2">Ver Playlists</a>
+                    <a th:href="@{/genres}" class="btn btn-secondary">Ver Géneros</a>
+                </div>
+            </div>
+        </th:block>
+
+        <th:block th:fragment="scripts">
+            <script>
+                console.log("Inicio cargado");
+            </script>
+        </th:block>
+
+    </th:block>
+</html>

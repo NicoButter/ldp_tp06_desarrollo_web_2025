@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<!-- estilos, contenido y scripts -->
-<th:block
-    th:with="headSection=~{::styles},
-             bodyContent=~{::contenido},
-             bodyScripts=~{::scripts}">
-
-    <!-- Reutilización el layout -->
-    <th:block th:replace="fragments/layout :: head(${genre.id} != null ? 'Editar Género' : 'Crear Género')" />
-</th:block>
-
-<!-- Estilos específicos -->
 <th:block th:fragment="styles">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" th:href="@{/css/genres_form_styles.css}" />
 </th:block>
 
-<!-- Contenido principal -->
 <th:block th:fragment="contenido">
     <div class="genre-form-container">
-        <h1 th:text="${genre.id} ? 'Editar Género' : 'Crear Género'"></h1>
-
-        <form th:action="@{/genres}" th:object="${genre}" method="post">
+        <h1 th:text="${genre.id} != null ? 'Editar Género' : 'Crear Género'"></h1>
+        
+        <form th:action="@{/genres}" th:object="${genre}" method="post" aria-labelledby="form-title">
             <input type="hidden" th:field="*{id}" />
-
-            <label for="nombre">Nombre del Género:</label>
-            <input type="text" th:field="*{nombre}" id="nombre" required maxlength="20"
-                   placeholder="Ej: Rock, Pop, Jazz" autofocus />
-
-            <button type="submit">
-                <i class="fas fa-save"></i> Guardar
-            </button>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required 
+                       aria-required="true" aria-describedby="nombre-error" />
+                <span id="nombre-error" class="error-message" th:if="${#fields.hasErrors('nombre')}" 
+                      th:errors="*{nombre}" style="color: #ef4444; font-size: 0.875rem; margin-top: 0.25rem; display: block;">
+                </span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a th:href="@{/genres}" class="btn btn-secondary btn-volver">Cancelar</a>
         </form>
-
-        <a th:href="@{/genres}" class="btn-volver">
-            <i class="fas fa-arrow-left"></i> Volver a la lista
-        </a>
     </div>
 </th:block>
 
-<!-- Scripts específicos (si querés agregar más luego) -->
 <th:block th:fragment="scripts">
     <script>
-        console.log("Formulario de género cargado con éxito");
+        console.log("Formulario de género cargado");
     </script>
 </th:block>

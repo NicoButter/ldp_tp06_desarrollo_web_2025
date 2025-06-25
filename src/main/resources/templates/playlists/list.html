@@ -1,13 +1,12 @@
-<!-- styles fragment -->
-<th:block th:fragment="styles">
+<th:block th:fragment="estilos">
     <link rel="stylesheet" th:href="@{/css/playlist_list_styles.css}" />
 </th:block>
 
-<!-- contenido fragment -->
 <th:block th:fragment="contenido">
     <div class="container my-5">
         <h1 class="mb-4 text-success">Lista de Playlists</h1>
         <a th:href="@{/playlists/new}" class="btn btn-success mb-3">Agregar Nueva Playlist</a>
+
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -36,15 +35,13 @@
                 </tr>
             </tbody>
         </table>
+
         <div class="text-end mt-4">
             <a th:href="@{/}" class="btn btn-secondary">Volver al Inicio</a>
         </div>
     </div>
 </th:block>
 
-<!-- scripts fragment -->
 <th:block th:fragment="scripts">
-    <script>
-        console.log("Página de Listas de reproducción cargada");
-    </script>
+    <script>console.log("Página cargada");</script>
 </th:block>

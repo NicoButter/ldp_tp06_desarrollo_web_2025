@@ -1,116 +1,116 @@
- /* Estilos específicos para este formulario (también pueden ir en styles.css) */
- body.genre-form {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     min-height: 100vh;
-     background-color: #f4f4f9;
-     margin: 0;
-     padding: 1rem;
-     font-family: 'Arial', sans-serif;
- }
+/* General container styling */
+.genre-form-container {
+    width: 100%;
+    max-width: 450px; /* Ligeramente más ancho para mejor legibilidad */
+    margin: 2rem auto; /* Centrado vertical y horizontal */
+    background: #ffffff;
+    padding: 2.5rem; /* Más espacio interno */
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente moderna */
+}
 
- .genre-form-container {
-     width: 100%;
-     max-width: 400px;
-     background: white;
-     padding: 2rem;
-     border-radius: 8px;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-     text-align: center;
- }
+/* Heading */
+.genre-form-container h1 {
+    color: #1db954;
+    font-size: 1.75rem; /* Tamaño más prominente */
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
- .genre-form h1 {
-     color: #1db954;
-     margin-bottom: 1.5rem;
- }
+/* Labels */
+.genre-form-container label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: #333; /* Mayor contraste */
+    text-align: left;
+    font-size: 0.95rem;
+}
 
- .genre-form label {
-     display: block;
-     margin-bottom: 0.5rem;
-     font-weight: bold;
-     color: #555;
-     text-align: left;
- }
+/* Input fields */
+.genre-form-container input[type="text"] {
+    width: 100%;
+    padding: 0.875rem; /* Más espacio interno */
+    margin-bottom: 1.75rem;
+    border: 1px solid #d1d5db; /* Gris más suave */
+    border-radius: 6px; /* Bordes más redondeados */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9fafb; /* Fondo claro para mejor UX */
+}
 
- .genre-form input[type="text"] {
-     width: 100%;
-     padding: 0.75rem;
-     margin-bottom: 1.5rem;
-     border: 1px solid #ddd;
-     border-radius: 4px;
-     font-size: 1rem;
-     transition: all 0.3s;
- }
+.genre-form-container input[type="text"]:hover {
+    border-color: #9ca3af; /* Gris más oscuro en hover */
+}
 
- .genre-form input[type="text"]:hover {
-     border-color: #aaa;
- }
+.genre-form-container input[type="text"]:focus {
+    border-color: #1db954;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.15); /* Sombra más suave */
+    background-color: #ffffff;
+}
 
- .genre-form input[type="text"]:focus {
-     border-color: #1db954;
-     outline: none;
-     box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
- }
+/* Invalid state */
+.genre-form-container input:required:invalid {
+    border-left: 4px solid #ef4444; /* Rojo más vibrante */
+    background-color: #fef2f2; /* Fondo sutil para indicar error */
+}
 
- .genre-form input:required:invalid {
-     border-left: 3px solid #ff4d4d;
- }
+/* Submit button */
+.genre-form-container button[type="submit"] {
+    background-color: #1db954;
+    color: #ffffff;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 0.75rem;
+}
 
- .genre-form button[type="submit"] {
-     background-color: #1db954;
-     color: white;
-     padding: 0.75rem;
-     border: none;
-     border-radius: 4px;
-     font-size: 1rem;
-     cursor: pointer;
-     transition: background-color 0.3s;
-     width: 100%;
-     margin-top: 0.5rem;
- }
+.genre-form-container button[type="submit"]:hover {
+    background-color: #15803d; /* Verde más oscuro */
+    transform: translateY(-1px); /* Efecto de elevación */
+}
 
- .genre-form button[type="submit"]:hover {
-     background-color: #17a74a;
- }
+.genre-form-container button[type="submit"]:active {
+    transform: translateY(0); /* Vuelve a posición original */
+}
 
- .genre-form .btn-volver {
-     display: inline-block;
-     margin-top: 1.5rem;
-     color: #666;
-     text-decoration: none;
-     transition: color 0.3s;
- }
+/* Cancel button */
+.genre-form-container .btn-volver {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #191414;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #191414;
+    text-align: center;
+}
 
- .genre-form .btn-volver:hover {
-     color: #1db954;
- }
+.genre-form-container .btn-volver:hover {
+    background-color: transparent;
+    color: #191414 !important;
+    border-color: #191414;
+}
 
- .genre-form .btn-volver i {
-     margin-right: 5px;
- }
+/* Responsive design */
+@media (max-width: 480px) {
+    .genre-form-container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
 
- .btn-volver {
-     display: inline-block;
-     margin-top: 1.5rem;
-     padding: 0.6rem 1.2rem;
-     background-color: #191414;
-     /* Negro spotify */
-     color: white !important;
-     text-decoration: none !important;
-     border-radius: 4px;
-     font-weight: bold;
-     transition: all 0.3s;
-     border: 2px solid #191414;
-     text-align: center;
- }
-
- .btn-volver:hover {
-     background-color: transparent;
-     color: #191414 !important;
- }
-
- .btn-volver i {
-     margin-right: 8px;
- }
+    .genre-form-container h1 {
+        font-size: 1.5rem;
+    }
+}
