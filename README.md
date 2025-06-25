@@ -43,39 +43,130 @@ Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Program
 - `static`: Archivos estáticos (CSS, JS, imágenes)
 
 ```
-📁 src
-└── 📁 main
-├── 📁 java
-│ └── 📁 ar.edu.unpaspotify
-│ ├── 📁 controller
-│ │    ├── GenreController.java
-│ │    └── PlaylistController.java
-│ ├── 📁 model
-│ │    ├── Genre.java
-│ │    └── Playlist.java
-│ ├── 📁 repository
-│ │    ├── GenreRepository.java
-│ │    └── PlaylistRepository.java
-│ ├── 📁 service
-│ │    ├── GenreService.java
-│ │    └── PlaylistService.java
-│ └── SpotifyCrudApplication.java
-└── 📁 resources
-├── application.properties
-├── 📁 static
-│   ├── 📁 css
-│   ├── 📁 img
-│   └── 📁 video
-└── 📁 templates
-├── 📁 fragments
-│   └── layout.html
-├── 📁 genres
-│   ├── form.html
-│   └── list.html
-├── index.html
-└── 📁 playlists
-├── form.html
-└── list.html
+.
+├── HELP.md
+├── img
+│   ├── Javik.png
+│   └── logo_UNPA.png
+├── LICENSE
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── README.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── ar
+│   │   │       └── edu
+│   │   │           └── unpaspotify
+│   │   │               ├── controller
+│   │   │               │   ├── GenreController.java
+│   │   │               │   └── PlaylistController.java
+│   │   │               ├── model
+│   │   │               │   ├── Genre.java
+│   │   │               │   └── Playlist.java
+│   │   │               ├── repository
+│   │   │               │   ├── GenreRepository.java
+│   │   │               │   └── PlaylistRepository.java
+│   │   │               ├── service
+│   │   │               │   ├── GenreService.java
+│   │   │               │   └── PlaylistService.java
+│   │   │               └── SpotifyCrudApplication.java
+│   │   └── resources
+│   │       ├── application.properties
+│   │       ├── static
+│   │       │   ├── css
+│   │       │   │   ├── genres_form_styles.css
+│   │       │   │   ├── genres_list_styles.css
+│   │       │   │   ├── index_styles.css
+│   │       │   │   ├── layout_styles.css
+│   │       │   │   ├── playlist_list_styles.css
+│   │       │   │   └── playlists_form_styles.css
+│   │       │   ├── favicon
+│   │       │   │   └── unpa_logo.png
+│   │       │   ├── img
+│   │       │   │   └── background.png
+│   │       │   └── video
+│   │       │       └── video_background.mp4
+│   │       └── templates
+│   │           ├── fragments
+│   │           │   └── layout.html
+│   │           ├── genres
+│   │           │   ├── form.html
+│   │           │   └── list.html
+│   │           ├── index.html
+│   │           └── playlists
+│   │               ├── form.html
+│   │               └── list.html
+│   └── test
+│       └── java
+│           └── ar
+│               └── edu
+│                   └── unpaspotify
+│                       └── SpotifyCrudApplicationTests.java
+└── target
+    ├── classes
+    │   ├── application.properties
+    │   ├── ar
+    │   │   └── edu
+    │   │       └── unpaspotify
+    │   │           ├── controller
+    │   │           │   ├── GenreController.class
+    │   │           │   └── PlaylistController.class
+    │   │           ├── model
+    │   │           │   ├── Genre.class
+    │   │           │   └── Playlist.class
+    │   │           ├── repository
+    │   │           │   ├── GenreRepository.class
+    │   │           │   └── PlaylistRepository.class
+    │   │           ├── service
+    │   │           │   ├── GenreService.class
+    │   │           │   └── PlaylistService.class
+    │   │           └── SpotifyCrudApplication.class
+    │   ├── static
+    │   │   ├── css
+    │   │   │   ├── genres_form_styles.css
+    │   │   │   ├── genres_list_styles.css
+    │   │   │   ├── index_styles.css
+    │   │   │   ├── layout_styles.css
+    │   │   │   ├── playlist_list_styles.css
+    │   │   │   └── playlists_form_styles.css
+    │   │   ├── favicon
+    │   │   │   └── unpa_logo.png
+    │   │   ├── img
+    │   │   │   └── background.png
+    │   │   └── video
+    │   │       └── video_background.mp4
+    │   └── templates
+    │       ├── fragments
+    │       │   └── layout.html
+    │       ├── genres
+    │       │   ├── form.html
+    │       │   └── list.html
+    │       ├── index.html
+    │       └── playlists
+    │           ├── form.html
+    │           └── list.html
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    └── test-classes
+        └── ar
+            └── edu
+                └── unpaspotify
+                    └── SpotifyCrudApplicationTests.class
+
 
 ```
 ---
