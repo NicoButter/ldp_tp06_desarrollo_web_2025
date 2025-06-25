@@ -12,7 +12,7 @@
 
 Este proyecto consiste en el desarrollo de una aplicación web basada en **Spring Boot** que permite realizar operaciones CRUD (crear, leer, actualizar, eliminar) sobre playlists al estilo Spotify.
 
-Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Programación* de la **Licenciatura en Sistemas** en la **UNPA (Universidad Nacional de la Patagonia Austral)**.
+Forma parte del **Trabajo Práctico N°6** de la materia *Laboratorio de Programación* de la **Licenciatura en Sistemas** en la **Universidad Nacional de la Patagonia Austral**.
 
 ---
 
